@@ -1,0 +1,85 @@
+.row{
+  display: flex;
+  justify-content: center;
+}
+
+.row.searchbar{
+  justify-content: right;
+}
+
+.form-inline{
+  display: inline-flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 15px; 
+}
+
+.form-inline>input{
+  min-width: 200px;
+}
+
+
+.img-container{
+  display: flex;
+  padding: 3px;
+}
+
+img{
+  border-radius: 2%;
+}
+
+.card-title{
+  padding-left: 5px;
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+.address-wrapper{
+  display: inline-flex;
+}
+
+.input-wrapper {
+  margin: 10px 5px; 
+  padding: 5px;
+  border: 1px solid rgb(157, 161, 164);
+  border-radius: 3%;
+}
+
+.field-container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.input-wrapper h5{
+  margin: 5px;
+}
+
+.input-wrapper i{
+  margin: 8px 6px;
+  cursor: pointer;
+}
+
+input{
+  margin: 5px; 
+  padding: 5px; 
+  border: 1px solid rgb(157, 161, 164);
+  border-radius: 3%;
+  height: 30px;
+  max-width: 140px;
+  font-size: 14px;
+  text-align: right;
+}
+
+.button-wrapper{
+  display: flex;
+  justify-content: end;
+  padding: 5px 6px;
+}
+
+.btn.btn-primary.custom{
+  background-color: rgb(107, 197, 141);
+  border: 1px solid rgb(253, 254, 255);
+  font-size: 14px;
+  max-width: 140px;
+}

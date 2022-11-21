@@ -1,0 +1,45 @@
+<div class="container">
+  <!--<div class="row searchbar">
+    <form (submit)="searchTerm($event)" class="form-inline">
+      <input #filter [ngModel]="" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div> -->
+  <div class="row">
+    <ng-container *ngFor="let user of users; let i = index" class="users-container">
+      <div class="card" style="width: 18rem; margin: 5px; padding: 5px;">
+        <div class="img-container">
+          <img class="card-img-top" src='https://picsum.photos/200/300?random=${{i}}' alt="Card image cap">
+        </div>
+        <div class="card-body">
+          <h4 class="card-title">{{user.name}}</h4>
+          <div class="input-wrapper">
+            <div class="address-wrapper">
+              <h5>Address</h5>
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <div class="field-container">
+              <span class="label">City: </span>
+              <input [(ngModel)]="user.address.city" type="text">
+            </div>
+            <div class="field-container">
+              <span class="label">Street: </span>
+              <input [(ngModel)]="user.address.street" type="text">
+            </div>
+            <div class="field-container">
+              <span class="label">ZIPCODE</span>
+              <input [(ngModel)]="user.address.zipcode" type="text">
+            </div>
+          </div>
+          <div class="button-wrapper">
+            <a type="button" class="btn btn-primary custom" [ngbPopover]="dialogComments" container="body"
+              [placement]="'auto'"> User comments</a>
+          </div>
+        </div>
+        <ng-template #dialogComments>
+          <app-user-comments [userId]="user.id"></app-user-comments>
+        </ng-template>
+      </div>
+    </ng-container>
+  </div>
+</div>

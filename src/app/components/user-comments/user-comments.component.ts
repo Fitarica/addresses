@@ -26,9 +26,7 @@ export class UserCommentsComponent implements OnInit, OnDestroy {
   initFilteredComments() {
     this.service.getComments().subscribe(res => {
       this.comments = res;
-      console.log('this users ', this.comments);  
       this.userComments = this.comments.filter(comment => comment.postId == this.userId);
-      console.log( this.userComments)
     }
     )
   }

@@ -33,7 +33,4 @@ export class UsersBoardComponent implements AfterViewInit, OnInit {
     })
   }
 
-  
-
-
 }
